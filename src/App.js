@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import { getCompaniesApi } from './services/companies.service';
+import { useEffect } from 'react';
 
 function App() {
+  
+  useEffect(async () => {
+    const companies = await getCompaniesApi();
+    console.log('companies: ', companies);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
