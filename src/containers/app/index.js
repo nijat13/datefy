@@ -1,19 +1,23 @@
-import logo from './logo.svg';
-import './App.scss';
-import { getCompaniesApi } from './services/companies.service';
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { getCompaniesApi } from '../../services/companies.service';
+import './index.scss';
+
+
+const fetchCompanies = async () => {
+  const companies = await getCompaniesApi();
+  console.log('companies: ', companies);
+}
 
 function App() {
   
-  useEffect(async () => {
-    const companies = await getCompaniesApi();
-    console.log('companies: ', companies);
+  useEffect(() => {
+    fetchCompanies();
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -29,5 +33,9 @@ function App() {
     </div>
   );
 }
+
+App.propTypes = {
+  name: PropTypes.string
+};
 
 export default App;
