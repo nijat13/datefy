@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCompaniesApi } from '../../services/companies.service';
 import './index.scss';
+import Header from '../../components/Header';
 
 
 const fetchCompanies = async () => {
@@ -17,19 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
     </div>
   );
 }
