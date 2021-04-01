@@ -1,0 +1,13 @@
+.Board {
+    display: flex;
+    background-color: #F5F8FA;
+
+    >.card {
+        width: 400px;
+        background: none;
+
+        .card-title {
+            text-align: center;
+        }
+    }
+}
