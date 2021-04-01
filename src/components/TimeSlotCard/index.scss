@@ -1,0 +1,20 @@
+.slot-card {
+    cursor: pointer;
+
+    &.reserved {
+        // background-color: red;
+        color: #5e6c84;
+        background-color: #d8d8d8;
+    }
+
+    >.card-body {
+        padding: 10px 20px;
+        position: relative;
+
+        .card-text svg {
+            position: absolute;
+            right: 16px;
+            top: calc(50% - 8px);
+        }
+    }
+}
