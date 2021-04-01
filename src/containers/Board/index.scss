@@ -1,13 +1,21 @@
 .Board {
     display: flex;
-    background-color: #F5F8FA;
+    overflow-x: auto;
+    width: 100%;
 
     >.card {
-        width: 400px;
+        width: 360px;
         background: none;
+        flex-shrink: 0;
+        border-radius: 0;
+        border: 0;
 
         .card-title {
             text-align: center;
+        }
+
+        &+.card {
+            border-left: 1px solid rgba(0, 0, 0, 0.125);
         }
     }
 }

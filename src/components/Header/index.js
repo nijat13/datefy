@@ -1,9 +1,10 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Nav, Navbar } from "react-bootstrap";
+import './index.scss';
 
 const Header = () => (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
         <Navbar.Brand href="/">Datefy</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

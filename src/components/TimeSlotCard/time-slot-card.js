@@ -9,26 +9,22 @@ const TimeSlotCardComponent = ({
     isReserved,
     onReservationClick,
     onCancelClick
-}) => {
-    // console.log('TimeSlotCardComponent...');
-
-    return (
-        <Card
-            className={`slot-card ${isReserved ? 'reserved' : ''}`}
-            onClick={() => !isReserved ? onReservationClick() : null}
-        >
-            <Card.Body>
-                <Card.Text>
-                    {timeSlot}
-                    {isReserved && <FontAwesomeIcon
-                        icon={faTrash}
-                        onClick={onCancelClick}
-                    />}
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    )
-};
+}) => (
+    <Card
+        className={`slot-card ${isReserved ? 'reserved' : ''}`}
+        onClick={() => !isReserved ? onReservationClick() : null}
+    >
+        <Card.Body>
+            <Card.Text>
+                {timeSlot}
+                {isReserved && <FontAwesomeIcon
+                    icon={faTrash}
+                    onClick={onCancelClick}
+                />}
+            </Card.Text>
+        </Card.Body>
+    </Card>
+);
 
 TimeSlotCardComponent.propTypes = {
     timeSlot: PropTypes.string.isRequired,

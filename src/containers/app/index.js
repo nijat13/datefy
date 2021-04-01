@@ -3,7 +3,7 @@ import Board from '../Board';
 import './index.scss';
 
 const App = () => (
-  <div className="Home">
+  <div className="App">
     <Header />
     <Board />
   </div>
